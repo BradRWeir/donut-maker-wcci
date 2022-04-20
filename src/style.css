@@ -1,0 +1,21 @@
+#pixi-canvas{
+    width:100%;
+}
+
+#pixi-content{
+    width:100%;
+    grid-area:main;
+}
+
+#overlay{
+    grid-area: main;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas: "main";
+    z-index: 2;
+}
+

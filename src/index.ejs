@@ -1,0 +1,76 @@
+<html>
+
+<head>
+	<title>Pixi Hotwire</title>
+
+	<meta id="viewport" name="viewport"
+		content="width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="style.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+			color: white;
+			font-family: 'Press Start 2P', cursive;
+		}
+
+		#pixi-content {
+			background: #000000;
+			width: 100%;
+			height: 100%;
+		}
+		#pixi-canvas{
+			width:100%;
+		}
+
+		#pixi-content{
+			width:100%;
+			grid-area:main;
+		}
+
+		#overlay{
+			grid-area: main;
+			z-index: 2;
+			display: flex;
+			gap: 2px;
+		}
+
+		body {
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: auto;
+			grid-template-areas: "main";
+			
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<noscript>Please enable JavaScript in your web browser to view this page.</noscript>
+
+	
+	<div id="overlay">
+		<div>
+		<label>Donut Count:</label><label id="donut-count"></label><br />
+		<label>Multiplier:</label><label id="multiplier"></label><br />
+	</div>
+		<label>clickerCount:</label><label id="clicker-count"></label><br />
+		<button id="clicker" hidden>Make Donut</button><br />
+		<div>
+			<label>Multiplier Cost:</label><label id="multiplier-cost"></label><br />
+			<button id="purchase-multiplier" hidden>Buy Multiplier</button><br />
+			<label>Clicker Cost:</label><label id="clicker-cost"></label><br />
+			<button id="purchase-clicker" hidden>Buy Auto-Clicker</button><br />
+		</div>
+	</div>
+	<div id="pixi-content"><canvas id="pixi-canvas" ></canvas></div>
+</body>
+
+</html>
